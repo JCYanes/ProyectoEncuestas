@@ -1,0 +1,19 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Lista de encuesta</h1>
+
+    {% if encuesta_list %}
+    <ul>
+
+      {% for encuesta in encuesta_list %}
+      <li>
+        <a href="{{'encuesta.get_absolute_url' }}">{{ encuesta.pregunta }}</a> ({{encuesta.propietario}})
+      </li>
+      {% endfor %}
+
+    </ul>
+    {% else %}
+      <p>No hay encuestas en la aplicación</p>
+    {% endif %}
+{% endblock %}

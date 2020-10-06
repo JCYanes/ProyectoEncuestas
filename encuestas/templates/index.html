@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1 class = "titulo">Portal de encuestas</h1>
+
+  <p>Bienvenido a el <em>portal de encuestas</em> un portal de encuestas actualizadas</p>
+
+<h2>Dynamic content</h2>
+
+  <p>Actualmente tenemos :</p>
+  <ul>
+    <li><strong>Total de encuestas:</strong> {{ num_encuestas }}</li>
+  </ul>
+
+{% endblock %}
